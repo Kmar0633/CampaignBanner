@@ -14,33 +14,47 @@
 font-weight: 900;font-size: 48px;line-height: 56px;display: flex;align-items: center;text-align: center;color: #FFFFFF;">Our Impact</h2>
       </div>
       <div>
-      <h1 id="text_banner1" class="text_banner_main" style="position: absolute; width: 466.31px;
+      <h1 id="text_banner1" class="no_of_actions" style="position: absolute; width: 466.31px;
 height: 216px;left: 100px;top: 100px;font-family: Bebas;font-style: normal;font-weight: normal;font-size: 180px;line-height: 216px;display: flex;align-items: center;
 text-align: center;color: #FFFFFF;">2000</h1>
     </div>
     <div>
-    <h1 id="text_banner" style="position: absolute;width: 431.1px;height: 216px;left: 584px;top: 100px;font-family: Bebas;font-style: normal;
+    <h1 id="text_banner" class="no_of_communities" style="position: absolute;width: 431.1px;height: 216px;left: 584px;top: 100px;font-family: Bebas;font-style: normal;
 font-weight: normal;font-size: 180px;line-height: 216px;display: flex;align-items: center;text-align: center;color: #FFFFFF;">105+</h1>
   </div>
     <div>
 
 
-      <h1 id="text_banner" style="position: absolute;width: 431.1px;height: 216px;left: 1067px;top: 100px;font-family: Bebas;font-style: normal;
+      <h1 id="text_banner" class="no_of_rupiah" style="position: absolute;width: 431.1px;height: 216px;left: 1067px;top: 100px;font-family: Bebas;font-style: normal;
 font-weight: normal;font-size: 180px;line-height: 216px;display: flex;align-items: center;text-align: center;color: #FFFFFF;">255+</h1>
       </div>
 
   </div>
   <script>
-  var el = document.querySelector('.text_banner_main');
-
+  var subsometerActions = document.querySelector('.no_of_actions');
+  var subsometerCommunities = document.querySelector('.no_of_communities');
+var subsometerRupiah = document.querySelector('.no_of_rupiah');
   const odometer = new Odometer({
-    el: el,
+    el: subsometerActions,
     animation: 'count',
-    duration:1000
+    duration:500
     // Any option (other than auto and selector) can be passed in here
   });
-  el.innerHTML=20;
-
+  const odometer2 = new Odometer({
+    el: subsometerCommunities,
+    animation: 'count',
+    duration:500
+    // Any option (other than auto and selector) can be passed in here
+  });
+  const odometer3 = new Odometer({
+    el: subsometerRupiah,
+    animation: 'count',
+    duration:500
+    // Any option (other than auto and selector) can be passed in here
+  });
+  subsometerActions.innerHTML=20;
+subsometerCommunities.innerHTML=105;
+subsometerRupiah.innerHTML=225;
   </script>
 
   </body>
